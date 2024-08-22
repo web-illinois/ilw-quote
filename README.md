@@ -6,23 +6,28 @@ Links: **[ilw-quote in Builder](https://builder3.toolkit.illinois.edu/component/
 
 ## Overview
 
-A 1-3 paragraph explanation of what the component does and how it presents.
+This component represents a quote or testimontial, with optional attribution of author and source. The quote or testimonial is intended to be intermixed with copy and the quote is highlighted and called out.
+
+Quotation marks are added automatically before and after the quote.
+
+This component should not contain a heading element.
+
+The quote should be contained within a paragraph element. The author should be contained within a paragraph elements with the slot attribute set to "author". The source should be contained within a cite element with the slot attribute set to "source".
 
 ## Code Examples
 
 ```html
-<ilw-quote></ilw-quote>
+<ilw-quote>
+    <p>Either university presses will embrace new technology and offer scholarly content in new forms
+        to researchers and under new business models, or they will follow the music industry and spend
+        all of their resources on trying to protect their territory &mdash; unsuccessfully.</p>
+    <p slot="author">Laura Cerruti</p>
+    <cite slot="source">Director of Digital Content Development, University of California Press, profiled in Against the Grain</cite>
+</ilw-quote>
 ```
 
-## Accessibility Notes and Use
-
-Consider accessibility, both for building the component and for its use:
-
-- Is there sufficient color contrast?
-- Can the component be fully understood without colors?
-- Does the component need alt text or ARIA roles?
-- Can the component be navigated with a keyboard? Is the tab order correct?
-- Are focusable elements interactive, and interactive elements focusable?
-- Are form fields, figures, fieldsets and other interactive elements labelled?
-
 ## External References
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+
+https://theadminbar.com/accessibility-weekly/coding-blockquotes/
