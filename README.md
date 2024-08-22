@@ -12,7 +12,7 @@ Quotation marks are added automatically before and after the quote.
 
 This component should not contain a heading element.
 
-The quote should be contained within a paragraph element. The author should be contained within a paragraph elements with the slot attribute set to "author". The source should be contained within a cite element with the slot attribute set to "source".
+The quote should be contained within a paragraph element. The author should be contained within a paragraph element with the slot attribute set to "author". The source should be contained within a cite element with the slot attribute set to "source".
 
 ## Code Examples
 
