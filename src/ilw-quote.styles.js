@@ -18,6 +18,10 @@ export default css`
     text-align: center;
   }
 
+  #content p {
+    font: var(--ilw-quote--font);
+  }
+
   #content {
     position: relative;
   }
