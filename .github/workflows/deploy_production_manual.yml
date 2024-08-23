@@ -11,7 +11,7 @@ env:
   MAJORVERSION: ''
   MINORVERSION: ''
   FULLVERSION: ''
-  COMPONENT_NAME: ${{ github.event.repository.name }}
+  COMPONENT_NAME: 'ilw-quote'
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -1,0 +1,62 @@
+:root {
+  --ilw-quote--background: white;
+  --ilw-quote--color: var(--il-blue);
+  --ilw-quote--author-color: var(--il-orange);
+  --ilw-quote--source-color: var(--il-blue);
+  --ilw-quote--mark-color: var(--il-orange);
+  --ilw-quote--font: italic 400 2.25em/1.41667em var(--il-font-serif);
+  --ilw-quote--author-font: 700 1.813em/1.207em var(--il-font-sans);
+  --ilw-quote--source-font: 300 1.438rem/1.875rem var(--il-font-sans);
+  --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
+  --ilw-quote--mark-top: 55px;
+  --ilw-quote--mark-left: -90px;
+  --ilw-quote--mark-content-before: "“";
+  --ilw-quote--mark-content-after: "”";
+  --ilw-quote--max-width: 620px;
+}
+
+@media only screen and (max-width: 792px) {
+  :root {
+    --ilw-quote--font: italic 400 1.813em/1.3103em var(--il-font-serif);
+    --ilw-quote--author-font: 700 1.5em/1.207em var(--il-font-sans);
+    --ilw-quote--source-font: 300 1.25rem/1.625rem var(--il-font-sans);
+    --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
+    --ilw-quote--mark-top: 45px;
+    --ilw-quote--mark-left: -70px;
+  }
+}
+
+.ilw-quote--exclude-marks {
+  --ilw-quote--mark-content-before: none;
+  --ilw-quote--mark-content-after: none;
+}
+
+ilw-quote *[slot=author] {
+  margin-top: 1.625rem;
+  text-align: center;
+  color: var(--ilw-quote--author-color);
+  font: var(--ilw-quote--author-font);
+}
+
+ilw-quote *[slot=source] {
+  margin-top: 1.275rem;
+  text-align: center;
+  color: var(--ilw-quote--source-color);
+  font: var(--ilw-quote--source-font);
+  display: block;
+}
+ilw-quote {
+  &[theme="blue"] {
+    --ilw-quote--background: var(--il-blue);
+    --ilw-quote--color: white;
+    --ilw-quote--author-color: var(--il-orange);
+    --ilw-quote--source-color: white;
+    --ilw-quote--mark-color: var(--il-orange);
+  }
+
+  &[theme="gray"] {
+    --ilw-quote--background: var(--il-storm-lighter-4);
+    --ilw-quote--author-color: var(--il-altgeld);
+    --ilw-quote--mark-color: var(--il-altgeld);
+  }
+}

@@ -3,12 +3,12 @@ import styles from './ilw-quote.styles';
 import './ilw-quote.css';
 
 class Quote extends LitElement {
-
     static get properties() {
         return {
             theme: { type: String, attribute: true }
         };
     }
+
 
     static get styles() {
         return styles;
@@ -21,9 +21,10 @@ class Quote extends LitElement {
 
     render() {
         return html`
-      <div>
-          <slot></slot>
-      </div>
+            <blockquote id="quote">
+                <div id="content"><slot></slot></div>
+                <div id="source"><slot name="author"></slot><slot name="source"></slot></div>
+            </blockquote>
     `;
     }
 }
