@@ -12,13 +12,13 @@ Quotation marks are added automatically before and after the quote.
 
 This component should not contain a heading element.
 
-The quote should be contained within a paragraph element. The author should be contained within a paragraph element with the slot attribute set to "author". The source should be contained within a cite element with the slot attribute set to "source".
+The quote should be contained within a paragraph element with the slot attribute set to "content". The author should be contained within a paragraph element with the slot attribute set to "author". The source should be contained within a cite element with the slot attribute set to "source".
 
 ## Code Examples
 
 ```html
 <ilw-quote>
-    <p>Either university presses will embrace new technology and offer scholarly content in new forms
+    <p slot="content">Either university presses will embrace new technology and offer scholarly content in new forms
         to researchers and under new business models, or they will follow the music industry and spend
         all of their resources on trying to protect their territory &mdash; unsuccessfully.</p>
     <p slot="author">Laura Cerruti</p>
