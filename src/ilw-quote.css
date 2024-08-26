@@ -4,9 +4,9 @@
   --ilw-quote--author-color: var(--il-orange);
   --ilw-quote--source-color: var(--il-blue);
   --ilw-quote--mark-color: var(--il-orange);
-  --ilw-quote--font: italic 400 2.25em/1.41667em var(--il-font-serif);
+  --ilw-quote--font: italic 400 2.25rem/3.1875rem var(--il-font-serif);
   --ilw-quote--author-font: 700 1.813em/1.207em var(--il-font-sans);
-  --ilw-quote--source-font: 300 1.438rem/1.875rem var(--il-font-sans);
+  --ilw-quote--source-font: 300 1.438em/1.25em var(--il-font-sans);
   --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
   --ilw-quote--mark-top: 55px;
   --ilw-quote--mark-left: -90px;
@@ -17,18 +17,22 @@
 
 @media only screen and (max-width: 792px) {
   :root {
-    --ilw-quote--font: italic 400 1.813em/1.3103em var(--il-font-serif);
+    --ilw-quote--font: italic 400 1.813rem/2.375rem var(--il-font-serif);
     --ilw-quote--author-font: 700 1.5em/1.207em var(--il-font-sans);
     --ilw-quote--source-font: 300 1.25rem/1.625rem var(--il-font-sans);
     --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
     --ilw-quote--mark-top: 45px;
-    --ilw-quote--mark-left: -70px;
+    --ilw-quote--mark-left: -50px;
   }
 }
 
 .ilw-quote--exclude-marks {
   --ilw-quote--mark-content-before: none;
   --ilw-quote--mark-content-after: none;
+}
+
+ilw-quote *[slot=content] {
+  font: var(--ilw-quote--font);
 }
 
 ilw-quote *[slot=author] {

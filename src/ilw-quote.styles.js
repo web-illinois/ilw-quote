@@ -16,13 +16,6 @@ export default css`
     color: var(--ilw-quote--color);
     font: var(--ilw-quote--font);
     text-align: center;
-  }
-
-  #content p {
-    font: var(--ilw-quote--font);
-  }
-
-  #content {
     position: relative;
   }
 
@@ -44,4 +37,5 @@ export default css`
     color: var(--ilw-quote--mark-color);
     font: var(--ilw-quote--mark-font);
     right: var(--ilw-quote--mark-left);
+  }
 `;
