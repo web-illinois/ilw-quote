@@ -1,10 +1,10 @@
 {
     "name": "@illinois-toolkit/ilw-quote",
-    "description": "One paragraph description of the component.",
+    "description": "This component represents a quote or testimontial, with optional attribution of author and source.",
     "repository": "github:web-illinois/ilw-quote",
     "private": false,
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "1.0.0-alpha",
     "type": "module",
     "files": [
         "src/**",
