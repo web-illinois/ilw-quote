@@ -25,6 +25,11 @@ The quote should be contained within a paragraph element with the slot attribute
     <cite slot="source">Director of Digital Content Development, University of California Press, profiled in Against the Grain</cite>
 </ilw-quote>
 ```
+## Upgrade Process
+* Rename ```il-quote``` to ```ilw-quote```
+* For the content, place it inside a ```p``` tag with a slot attribute ```slot="content"```
+* for the author, change ```slot="attributed"``` to ```slot="author"```
+* for the source, change ```p``` tag to ```cite``` tag and change ```slot="secondary"``` to ```slot="source"```
 
 ## External References
 
