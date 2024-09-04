@@ -6,7 +6,7 @@ Links: **[ilw-quote in Builder](https://builder3.toolkit.illinois.edu/component/
 
 ## Overview
 
-This component represents a quote or testimontial, with optional attribution of author and source. The quote or testimonial is intended to be intermixed with copy and the quote is highlighted and called out.
+This component represents a quote or testimonial, with optional attribution of author and source. The quote or testimonial is intended to be intermixed with copy and the quote is highlighted and called out.
 
 Quotation marks are added automatically before and after the quote.
 
