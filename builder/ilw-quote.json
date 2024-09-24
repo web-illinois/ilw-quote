@@ -4,7 +4,8 @@
     "github": "https://github.com/web-illinois/ilw-quote/",
     "type": "web component",
     "element-name": "ilw-quote",
-    "description": "Description for builder.",
+    "description": "Displays a quote or testimonial, with optional attribution of author and source.",
+    "purpose": "Highlight a quote or testimonial.",
     "toolkit-version": "",
     "production-version": "",
     "development-version": "1.0-beta"
