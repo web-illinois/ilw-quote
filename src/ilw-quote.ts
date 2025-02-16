@@ -1,5 +1,5 @@
 import {LitElement, html, unsafeCSS} from 'lit';
-import { customElement, property, query, queryAll } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 // @ts-ignore
 import styles from "./ilw-quote.styles.css?inline";
 import './ilw-quote.css';
@@ -8,6 +8,15 @@ import './ilw-quote.css';
 export default class Quote extends LitElement {
     @property()
     theme: string = '';
+
+    @property()
+    align: "left" | "right" | "center" = "center";
+
+    @property()
+    size: "small" | "medium" | "large" = "small";
+
+    @property()
+    font: "sans" | "serif" = "serif";
 
     static get styles() {
         return unsafeCSS(styles);
