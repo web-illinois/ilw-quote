@@ -29,12 +29,6 @@
     --ilw-quote--border: 6px solid var(--il-orange);
   }
 
-  @media only screen and (max-width: 792px) {
-    :root {
-      --ilw-quote--mark-top: 45px;
-    }
-  }
-
   ilw-quote {
     font-family: var(--ilw-quote--font);
     font-size: var(--ilw-quote--base-font-size);
