@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    background: var(--ilw-quote--background);
+}
+
+#quote {
+    margin: 0 auto;
+    max-width: var(--ilw-quote--max-width);
+}
+
+#content {
+    color: var(--ilw-quote--color);
+    position: relative;
+}
+
+#content::before {
+    content: var(--ilw-quote--mark-content-before);
+    position: relative;
+    font-style: normal;
+    color: var(--ilw-quote--mark-color);
+    font: var(--ilw-quote--mark-font);
+    line-height: 1;
+    height: var(--ilw-quote--mark-height);
+    top: var(--ilw-quote--mark-top);
+    display: block;
+}

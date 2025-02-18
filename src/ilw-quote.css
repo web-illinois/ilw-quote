@@ -1,28 +1,82 @@
-:root {
-  --ilw-quote--background: white;
-  --ilw-quote--color: var(--il-blue);
-  --ilw-quote--author-color: var(--il-orange);
-  --ilw-quote--source-color: var(--il-blue);
-  --ilw-quote--mark-color: var(--il-orange);
-  --ilw-quote--font: italic 400 2.25rem/3.1875rem var(--il-font-serif);
-  --ilw-quote--author-font: 700 1.813em/1.207em var(--il-font-sans);
-  --ilw-quote--source-font: 300 1.438em/1.25em var(--il-font-sans);
-  --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
-  --ilw-quote--mark-top: 55px;
-  --ilw-quote--mark-left: -90px;
-  --ilw-quote--mark-content-before: "“";
-  --ilw-quote--mark-content-after: "”";
-  --ilw-quote--max-width: 620px;
-}
 
-@media only screen and (max-width: 792px) {
+@layer base {
   :root {
-    --ilw-quote--font: italic 400 1.813rem/2.375rem var(--il-font-serif);
-    --ilw-quote--author-font: 700 1.5em/1.207em var(--il-font-sans);
-    --ilw-quote--source-font: 300 1.25rem/1.625rem var(--il-font-sans);
-    --ilw-quote--mark-font: 700 3.472em/0 var(--il-font-serif);
-    --ilw-quote--mark-top: 45px;
-    --ilw-quote--mark-left: -50px;
+    --ilw-quote--background: white;
+    --ilw-quote--color: var(--il-blue);
+    --ilw-quote--author-color: var(--il-orange);
+    --ilw-quote--source-color: var(--il-blue);
+    --ilw-quote--mark-color: var(--il-orange);
+    --ilw-quote--margin: 1rem 0;
+    --ilw-quote--padding: 0 0 1em 0;
+    --ilw-quote--base-font-size: 0.875rem;
+    --ilw-quote--font: var(--il-font-sans);
+    --ilw-quote--font-serif: var(--il-font-serif);
+    --ilw-quote--font-weight: 600;
+    --ilw-quote--font-size: 1.625em;
+    --ilw-quote--line-height: 1.35;
+    --ilw-quote--author-font-weight: 700;
+    --ilw-quote--author-font-size: 1.625em;
+    --ilw-quote--author-line-height: 1.1;
+    --ilw-quote--source-font-weight: 400;
+    --ilw-quote--source-font-size: 1.428em;
+    --ilw-quote--source-line-height: 1.35;
+    --ilw-quote--mark-font: 9.5em/0 var(--il-font-serif);
+    --ilw-quote--mark-height: 0.40em;
+    --ilw-quote--mark-top: -10px;
+    --ilw-quote--mark-content-before: "“";
+    --ilw-quote--mark-content-after: "”";
+    --ilw-quote--max-width: 620px;
+    --ilw-quote--border: 6px solid var(--il-orange);
+  }
+
+  @media only screen and (max-width: 792px) {
+    :root {
+      --ilw-quote--mark-top: 45px;
+    }
+  }
+
+  ilw-quote {
+    font-family: var(--ilw-quote--font);
+    font-size: var(--ilw-quote--base-font-size);
+    text-align: center;
+    margin: var(--ilw-quote--margin);
+    padding: var(--ilw-quote--padding);
+
+    &[theme="blue"] {
+      --ilw-quote--background: var(--il-blue);
+      --ilw-quote--color: white;
+      --ilw-quote--author-color: var(--il-orange);
+      --ilw-quote--source-color: white;
+      --ilw-quote--mark-color: var(--il-orange);
+    }
+
+    &[theme="gray"] {
+      --ilw-quote--background: var(--il-storm-lighter-4);
+      --ilw-quote--author-color: var(--il-altgeld);
+      --ilw-quote--mark-color: var(--il-altgeld);
+    }
+
+    &[align=left] {
+      text-align: left;
+      border-left: var(--ilw-quote--border);
+      --ilw-quote--max-width: none;
+      padding-left: 3.125em;
+    }
+
+    &[align=right] {
+      text-align: right;
+      border-right: var(--ilw-quote--border);
+      --ilw-quote--max-width: none;
+      padding-right: 3.125em;
+    }
+
+    &[size=medium] {
+      --ilw-quote--base-font-size: 1rem;
+    }
+
+    &[size=large] {
+      --ilw-quote--base-font-size: 1.154rem;
+    }
   }
 }
 
@@ -32,35 +86,31 @@
 }
 
 ilw-quote *[slot=content] {
-  font: var(--ilw-quote--font);
+  font-weight: var(--ilw-quote--font-weight);
+  font-size: var(--ilw-quote--font-size);
+  line-height: var(--ilw-quote--line-height);
+}
+
+ilw-quote[font=serif] *[slot=content] {
+  font-family: var(--ilw-quote--font-serif);
+  --ilw-quote--font-weight: 400;
 }
 
 ilw-quote *[slot=author] {
-  margin-top: 1.625rem;
-  text-align: center;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
   color: var(--ilw-quote--author-color);
-  font: var(--ilw-quote--author-font);
+  font-weight: var(--ilw-quote--author-font-weight);
+  font-size: var(--ilw-quote--author-font-size);
+  line-height: var(--ilw-quote--author-line-height);
 }
 
 ilw-quote *[slot=source] {
-  margin-top: 1.275rem;
-  text-align: center;
+  margin: 0;
   color: var(--ilw-quote--source-color);
-  font: var(--ilw-quote--source-font);
+  font-style: inherit;
+  font-weight: var(--ilw-quote--source-font-weight);
+  font-size: var(--ilw-quote--source-font-size);
+  line-height: var(--ilw-quote--source-line-height);
   display: block;
-}
-ilw-quote {
-  &[theme="blue"] {
-    --ilw-quote--background: var(--il-blue);
-    --ilw-quote--color: white;
-    --ilw-quote--author-color: var(--il-orange);
-    --ilw-quote--source-color: white;
-    --ilw-quote--mark-color: var(--il-orange);
-  }
-
-  &[theme="gray"] {
-    --ilw-quote--background: var(--il-storm-lighter-4);
-    --ilw-quote--author-color: var(--il-altgeld);
-    --ilw-quote--mark-color: var(--il-altgeld);
-  }
 }
