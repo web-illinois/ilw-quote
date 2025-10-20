@@ -1,11 +1,11 @@
 
 @layer base {
   :root {
-    --ilw-quote--background: white;
-    --ilw-quote--color: var(--il-blue);
-    --ilw-quote--author-color: var(--il-orange);
-    --ilw-quote--source-color: var(--il-blue);
-    --ilw-quote--mark-color: var(--il-orange);
+    --ilw-quote--background: var(--ilw-color--background);
+    --ilw-quote--color: var(--ilw-color--heading);
+    --ilw-quote--author-color: var(--ilw-color--control-accent);
+    --ilw-quote--source-color: var(--ilw-color--heading);
+    --ilw-quote--mark-color: var(--ilw-color--control-accent);
     --ilw-quote--margin: 1rem 0;
     --ilw-quote--padding: 0 0 1em 0;
     --ilw-quote--base-font-size: 0.875rem;
@@ -26,7 +26,7 @@
     --ilw-quote--mark-content-before: "“";
     --ilw-quote--mark-content-after: "”";
     --ilw-quote--max-width: 620px;
-    --ilw-quote--border: 6px solid var(--il-orange);
+    --ilw-quote--border: 6px solid var(--ilw-color--control-accent);
   }
 
   ilw-quote {
@@ -37,16 +37,14 @@
     padding: var(--ilw-quote--padding);
 
     &[theme="blue"] {
-      --ilw-quote--background: var(--il-blue);
-      --ilw-quote--color: white;
-      --ilw-quote--author-color: var(--il-orange);
-      --ilw-quote--source-color: white;
-      --ilw-quote--mark-color: var(--il-orange);
+      --ilw-quote--background: var(--ilw-color--background);
+      --ilw-quote--color: var(--ilw-color--heading);
+      --ilw-quote--source-color: var(--ilw-color--blue--control-text);
       --ilw-quote--padding: 1em 0;
     }
 
     &[theme="gray"] {
-      --ilw-quote--background: var(--il-storm-lighter-4);
+      --ilw-quote--background: var(--ilw-color--background);
       --ilw-quote--author-color: var(--il-altgeld);
       --ilw-quote--mark-color: var(--il-altgeld);
       --ilw-quote--padding: 1em 0;
