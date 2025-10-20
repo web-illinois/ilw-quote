@@ -42,12 +42,14 @@
       --ilw-quote--author-color: var(--il-orange);
       --ilw-quote--source-color: white;
       --ilw-quote--mark-color: var(--il-orange);
+      --ilw-quote--padding: 1em 0;
     }
 
     &[theme="gray"] {
       --ilw-quote--background: var(--il-storm-lighter-4);
       --ilw-quote--author-color: var(--il-altgeld);
       --ilw-quote--mark-color: var(--il-altgeld);
+      --ilw-quote--padding: 1em 0;
     }
 
     &[align=left] {
@@ -55,6 +57,7 @@
       border-left: var(--ilw-quote--border);
       --ilw-quote--max-width: none;
       padding-left: 3.125em;
+      padding-right: 1em;
     }
 
     &[align=right] {
@@ -62,6 +65,7 @@
       border-right: var(--ilw-quote--border);
       --ilw-quote--max-width: none;
       padding-right: 3.125em;
+      padding-left: 1em;
     }
 
     &[size=medium] {
