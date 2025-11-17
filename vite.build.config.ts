@@ -15,6 +15,7 @@ export default defineConfig({
             output: {
                 assetFileNames: (chunkInfo) => {
                     if (chunkInfo.name === "style.css") return "ilw-quote.css";
+                    return "[name][extname]";
                 },
             },
         },
