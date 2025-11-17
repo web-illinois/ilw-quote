@@ -1,6 +1,6 @@
 :host {
     display: block;
-    background: var(--ilw-quote--background);
+    background: var(--ilw-color--background);
 }
 
 #quote {
@@ -9,7 +9,7 @@
 }
 
 #content {
-    color: var(--ilw-quote--color);
+    color: var(--ilw-color--heading);
     position: relative;
 }
 
@@ -17,7 +17,7 @@
     content: var(--ilw-quote--mark-content-before);
     position: relative;
     font-style: normal;
-    color: var(--ilw-quote--mark-color);
+    color: var(--ilw-color--control-accent);
     font: var(--ilw-quote--mark-font);
     line-height: 1;
     height: var(--ilw-quote--mark-height);

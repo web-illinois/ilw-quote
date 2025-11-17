@@ -1,11 +1,6 @@
 
 @layer base {
   :root {
-    --ilw-quote--background: white;
-    --ilw-quote--color: var(--il-blue);
-    --ilw-quote--author-color: var(--il-orange);
-    --ilw-quote--source-color: var(--il-blue);
-    --ilw-quote--mark-color: var(--il-orange);
     --ilw-quote--margin: 1rem 0;
     --ilw-quote--padding: 0 0 1em 0;
     --ilw-quote--base-font-size: 0.875rem;
@@ -26,7 +21,7 @@
     --ilw-quote--mark-content-before: "“";
     --ilw-quote--mark-content-after: "”";
     --ilw-quote--max-width: 620px;
-    --ilw-quote--border: 6px solid var(--il-orange);
+    --ilw-quote--border: 6px solid var(--ilw-color--control-accent);
   }
 
   ilw-quote {
@@ -35,20 +30,6 @@
     text-align: center;
     margin: var(--ilw-quote--margin);
     padding: var(--ilw-quote--padding);
-
-    &[theme="blue"] {
-      --ilw-quote--background: var(--il-blue);
-      --ilw-quote--color: white;
-      --ilw-quote--author-color: var(--il-orange);
-      --ilw-quote--source-color: white;
-      --ilw-quote--mark-color: var(--il-orange);
-    }
-
-    &[theme="gray"] {
-      --ilw-quote--background: var(--il-storm-lighter-4);
-      --ilw-quote--author-color: var(--il-altgeld);
-      --ilw-quote--mark-color: var(--il-altgeld);
-    }
 
     &[align=left] {
       text-align: left;
@@ -93,7 +74,7 @@ ilw-quote[font=serif] *[slot=content] {
 ilw-quote *[slot=author] {
   margin-top: 1.8em;
   margin-bottom: 0.5em;
-  color: var(--ilw-quote--author-color);
+  color: var(--ilw-color--control-accent);
   font-weight: var(--ilw-quote--author-font-weight);
   font-size: var(--ilw-quote--author-font-size);
   line-height: var(--ilw-quote--author-line-height);
@@ -101,7 +82,7 @@ ilw-quote *[slot=author] {
 
 ilw-quote *[slot=source] {
   margin: 0;
-  color: var(--ilw-quote--source-color);
+  color: var(--ilw-color--heading);
   font-style: inherit;
   font-weight: var(--ilw-quote--source-font-weight);
   font-size: var(--ilw-quote--source-font-size);
