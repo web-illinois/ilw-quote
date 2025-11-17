@@ -16,7 +16,7 @@ export default defineConfig({
             external: [/^@?lit/, /^@illinois-toolkit/],
             output: {
                 assetFileNames: (chunkInfo) => {
-                    if (chunkInfo.name === "style.css") return "ilw-quote.css";
+                    return "[name][extname]"; // vite default
                 },
             },
         },
