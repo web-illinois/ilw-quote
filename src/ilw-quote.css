@@ -2,7 +2,6 @@
 @layer base {
   :root {
     --ilw-quote--margin: 1rem 0;
-    --ilw-quote--padding: 0 0 1em 0;
     --ilw-quote--base-font-size: 0.875rem;
     --ilw-quote--font: var(--il-font-sans);
     --ilw-quote--font-serif: var(--il-font-serif);
@@ -29,7 +28,6 @@
     font-size: var(--ilw-quote--base-font-size);
     text-align: center;
     margin: var(--ilw-quote--margin);
-    padding: var(--ilw-quote--padding);
 
     &[align=left] {
       text-align: left;

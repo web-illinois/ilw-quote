@@ -31,7 +31,14 @@
         }
     ],
     "attributes-fixed": [],
-    "attributes-text": [],
+    "attributes-text": [
+         {
+            "name": "padding",
+            "description": "Padding of the text inside the component",
+            "depreciated": false,
+            "value": ""
+        }
+    ],
     "attributes": [
         {
             "name": "theme",
