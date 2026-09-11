@@ -1,12 +1,26 @@
 {
-    "title": "Quote",
-    "tag": "ilw-quote",
-    "github": "https://github.com/web-illinois/ilw-quote/",
-    "type": "web component",
-    "element-name": "ilw-quote",
-    "description": "Displays a quote or testimonial, with optional attribution of author and source.",
-    "purpose": "Highlight a quote or testimonial.",
-    "toolkit-version": "1.2",
-    "production-version": "1.2",
-    "development-version": "latest"
+  "title": "Quote",
+  "id": "ilw-quote",
+  "type": "Web Component",
+  "repository-name": "ilw-quote",
+  "description": "Highlight a quotation or testimonial with optional attribution, source information, and visual styling.",
+  "purpose": "Highlight a quote or testimonial.",
+  "customtemplates": [],
+  "versions": [
+    {
+      "name": "1.0",
+      "notes": "",
+      "template": "1.0"
+    },
+    {
+      "name": "1.1",
+      "notes": "",
+      "template": "1.1"
+    },
+    {
+      "name": "1.2",
+      "notes": "",
+      "template": "1.2"
+    }
+  ]
 }
